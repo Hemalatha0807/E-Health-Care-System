@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!-- define the root element and the controller class -->
+<AnchorPane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="hellofx.xsd" id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.companyname.appname.EHealthCareManagementSystemController">
+   <!-- define the children elements -->
+   <children>
+      <!-- define a label for the title -->
+      <Label layoutX="200.0" layoutY="14.0" text="E-Health Care Management System" textAlignment="CENTER" underline="true">
+         <!-- define the font style and size -->
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <!-- define a label for the username -->
+      <Label layoutX="100.0" layoutY="100.0" text="Username:" />
+      <!-- define a text field for the username -->
+      <TextField fx:id="tfUsername" layoutX="200.0" layoutY="100.0" />
+      <!-- define a label for the password -->
+      <Label layoutX="100.0" layoutY="150.0" text="Password:" />
+      <!-- define a password field for the password -->
+      <PasswordField fx:id="pfPassword" layoutX="200.0" layoutY="150.0" />
+      <!-- define a button for the login -->
+      <Button fx:id="btLogin" layoutX="250.0" layoutY="200.0" mnemonicParsing="false" onAction="#login" text="Login" />
+      <!-- define a label for the message -->
+      <Label fx:id="lbMessage" layoutX="200.0" layoutY="250.0" text="" textFill="RED" />
+   </children>
+</AnchorPane>

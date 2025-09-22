@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="AnchorPane">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="children">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Label" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence minOccurs="0">
+                                        <xs:element name="font" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Font">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="name" use="required" />
+                                                            <xs:attribute name="size"
+                                                                type="xs:decimal" use="required" />
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="layoutX" type="xs:decimal" use="required" />
+                                    <xs:attribute name="layoutY" type="xs:decimal" use="required" />
+                                    <xs:attribute name="text" use="required" />
+                                    <xs:attribute name="textAlignment" />
+                                    <xs:attribute name="underline" type="xs:boolean" />
+                                    <xs:attribute name="textFill" />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="TextField">
+                                <xs:complexType>
+                                    <xs:attribute name="layoutX" type="xs:decimal" use="required" />
+                                    <xs:attribute name="layoutY" type="xs:decimal" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="PasswordField">
+                                <xs:complexType>
+                                    <xs:attribute name="layoutX" type="xs:decimal" use="required" />
+                                    <xs:attribute name="layoutY" type="xs:decimal" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Button">
+                                <xs:complexType>
+                                    <xs:attribute name="layoutX" type="xs:decimal" use="required" />
+                                    <xs:attribute name="layoutY" type="xs:decimal" use="required" />
+                                    <xs:attribute name="mnemonicParsing" type="xs:boolean"
+                                        use="required" />
+                                    <xs:attribute name="onAction" use="required" />
+                                    <xs:attribute name="text" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" use="required" />
+            <xs:attribute name="prefHeight" type="xs:decimal" use="required" />
+            <xs:attribute name="prefWidth" type="xs:decimal" use="required" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
